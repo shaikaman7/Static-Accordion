@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #88bdef;
+      }
+      .container {
+        width: 1000px;
+      }
+      .accordion {
+        background-color: #d0caca;
+        color: #373333;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        box-shadow: 0px 1px black;
+        text-align: left;
+        outline: #093660;
+        font-size: 15px;
+        transition: 0.5s;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: #615f5f;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: greenyellow;
+        overflow: hidden;
+      }
+      .Description {
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="text-dark text-center p-2 mt-5 mb-3">
+      <b><u>Static Accordion</u></b>
+    </h2>
+    <div class="container">
+      <h2 class="text-center text-danger m-3">Frequently asked questions ?</h2>
+      <button class="accordion">How do I manage my orders on Amazon.in?</button>
+      <div class="panel">
+        <p class="Description">
+          You can view your orders and manage them through “Manage Order” inside
+          Seller Central (you will have access to sellercentral.amazon.in after
+          your complete registration). If you are using Fulfilment by Amazon,
+          your orders will be fulfilled and shipped by Amazon. If you are using
+          Easy Ship, you can pack your orders and schedule pickup for our team
+          through your Seller Central account. If you choose to store and
+          deliver your products on your own, you need to pack and ship products
+          to customers and then confirm to the customer about the shipment
+          through your Seller Central account.
+        </p>
+      </div>
+
+      <button class="accordion">How do I list my products on Amazon.in?</button>
+      <div class="panel">
+        <p class="Description">
+          You can use our Web-based interface to list products one at a time, or
+          excel-based inventory files to list your products in bulk. The
+          procedure and information required will vary depending on whether your
+          products are already in the Amazon.in catalogue. Once you complete
+          your registration for selling on Amazon, you will be guided on the
+          steps needed to list your products. Learn more about the listing
+          process here. Please note that currently it is mandatory to have
+          ISBN/bar codes to list on Amazon. If you are a manufacturer or do not
+          have these, you can request for an exception by contacting seller
+          support through your Seller Central account. Some product categories
+          might require additional information to list your products
+        </p>
+      </div>
+
+      <button class="accordion">What products can I sell on Amazon.in?</button>
+      <div class="panel">
+        <p class="Description">
+          You can sell items in the following categories: Apparel, Automotive,
+          Baby Products, Batteries, Beauty, Books, Consumables, Consumer
+          Electronics (including Cameras and Video Games - Consoles), Digital
+          Accessories (including Mobile Accessories, Electronics Accessories and
+          PC Accessories), Groceries, Home, Jewelery, Kitchen, Luggage, Mobile
+          Phones, Movies, Musical Instruments, Office and Stationary, Personal
+          Care Appliances, Personal Computers, Pet Supplies, Software, Shoes and
+          Handbags, Tablets, Toys, Video games (consoles and games) and Watches.
+        </p>
+      </div>
+      <button class="accordion">Are there requirements for my category?</button>
+      <div class="panel">
+        <p class="Description">
+          If you have products to list in bulk, it is advisable to choose the
+          Bulk listing option to add your products on Amazon.in. You can upload
+          products in bulk for both - a new product ASIN created on Amazon.in or
+          an already existing ASIN on Amazon.in. You can use inventory file
+          templates to list your products in Amazon.in. You can create a
+          template to suit your specific requirements and list different types
+          of products across multiple categories using one custom template.
+        </p>
+      </div>
+      <button class="accordion">
+        I'm having trouble during registration. Can I get some help?
+      </button>
+      <div class="panel">
+        <p class="Description">
+          If you are stuck during registration, you can get help in our
+          Registration Guide Once you are registered Amazon seller, you can also
+          contact seller support once you complete your registration through
+          your Seller Central account. Once you are logged in, use the "Help"
+          button on the top right find a variety of help options. If you cannot
+          find an answer to your question, click "Get Support" to get in-person
+          support.
+        </p>
+      </div>
+      <button class="accordion">
+        Can customers leave feedback and why is customer feedback important?
+      </button>
+      <div class="panel">
+        <p class="Description">
+          Yes. Customers can leave feedback. Maintaining a high feedback rating
+          is a critical factor for success on Amazon.in. It's the best way for
+          customers to identify you as a trustworthy seller. Your rating appears
+          on the Offer Listing Page and is one of the first things that
+          customers see. In other marketplaces, we have observed that customers
+          are more likely to purchase products from sellers with higher ratings.
+          Your feedback rating is a key metric used by Amazon.in to measure your
+          performance.
+        </p>
+      </div>
+
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            let panel = this.nextelementsibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+      </script>
+    </div>
+  </body>
+</html>
